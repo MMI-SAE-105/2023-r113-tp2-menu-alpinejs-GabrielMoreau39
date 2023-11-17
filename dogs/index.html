@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<head>
+    <script defer src="https://unpkg.com/alpinejs@3.x.x/dist/cdn.min.js"></script>
+</head>
+<body>
+    <header>
+        <button
+        aria-controls=mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header__menuBtn"
+        >
+        menu
+        </button>
+        <h1>Test de menu</h1>
+        <nav
+        id="mainNav" 
+        x-show="menuIsOpen"
+        x-transition.duration.800ms
+        class="menu"
+        >
+        <ul>
+            <li><a href="#">Accueil des chats</a></li>
+            <li><a href="#">Accueil des chiens</a></li>
+        </ul>
+        </nav>
+    </header>
+</body>
