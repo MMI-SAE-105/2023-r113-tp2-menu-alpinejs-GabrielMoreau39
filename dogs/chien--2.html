@@ -28,26 +28,31 @@
     </style>
   </head>
   <body>
-    <!-- https://emmet.io/ -->
-    <!-- header>h1{Test de menu} -->
-    <header>
-      <button
-        aria-controls=mainNav"
-        @click="menuIsOpen = ! menuIsOpen"
-        class="header__menuBtn"
-      >
-        menu
-      </button>
-      <h1>Test de menu</h1>
-      <nav
-        id="mainNav" 
-        x-show="menuIsOpen"
-        x-transition.duration.800ms
-        class="menu"
-      >
-        <ul>
-          <li><a href="cats/index.html">Accueil des chats</a></li>
-          <li><a href="dogs/index.html">Accueil des chiens</a></li>
-        </ul>
-      </nav>
-    </header>
+        <!-- https://emmet.io/ -->
+        <!-- header>h1{Test de menu} -->
+        <header>
+        <button
+            aria-controls=mainNav"
+            @click="menuIsOpen = ! menuIsOpen"
+            class="header__menuBtn"
+        >
+            menu
+        </button>
+        <h1>Chien labrador blanc</h1>
+        <nav
+            id="mainNav" 
+            x-show="menuIsOpen"
+            x-transition.duration.800ms
+            class="menu"
+        >
+            <ul>
+                <li><img src="https://api.iconify.design/openmoji:home-button.svg"><a href="../index.html">Accueil du site</a></li>
+                <li><img src="https://api.iconify.design/openmoji:dog.svg"><a href="../dogs/index.html">Accueil des chiens</a></li>
+                <li><img src="https://api.iconify.design/openmoji:dog-face.svg"><a href="../dogs/chien--2.html">Chien labrador blanc</a></li>
+                <li><img src="https://api.iconify.design/openmoji:cat.svg"></a><a href="../cats/index.html">Accueil des chats</a></li>
+            </ul>
+        </nav>
+        </header>
+        <img src="../public/img/dogs/téléchargé (1).jpg" alt="image chien labrador blanc"> 
+        <p>Ce deuxième chien est un chien blanc qui appartient à la race des labradors. Il possède un pelage blanc avec de courts poils et ses yeux sont fermés. Il a une posture et une expression qui montre que c'est un chien gentil et calme.</p> 
+    </body>
