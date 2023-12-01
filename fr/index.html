@@ -25,12 +25,20 @@
       .noscroll body {
         overflow: hidden;
       }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        background-color: #000000;
+        box-shadow: 0 0 0.5rem #000;
+        color: #fff;
+      }
     </style>
   </head>
   <body>
-    <!-- https://emmet.io/ -->
-    <!-- header>h1{Test de menu} -->
     <header>
+      
       <button
         aria-controls=mainNav"
         @click="menuIsOpen = ! menuIsOpen"
@@ -39,6 +47,8 @@
         menu
       </button>
       <h1>Page d'accueil</h1>
+      <a href="../en/index.html"><img src="https://api.iconify.design/flag:gb-4x3.svg" alt="drapeau du Royaume Uni" width="50px" height="50px"></a>
+      </a>
       <nav
         id="mainNav" 
         x-show="menuIsOpen"
@@ -51,6 +61,7 @@
         </ul>
       </nav>
     </header>
+    
     <!-- h2>lorem2^p>lorem -->
     <h2>Et vous, vous êtes plutôt chien ou chats?</h2>
     <p>

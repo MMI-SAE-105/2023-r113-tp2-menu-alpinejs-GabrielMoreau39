@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+<html lang="en" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
@@ -25,6 +25,15 @@
       .noscroll body {
         overflow: hidden;
       }
+      header {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        padding: 0 1rem;
+        background-color: #000000;
+        box-shadow: 0 0 0.5rem #000;
+        color: #fff;
+      }
     </style>
   </head>
   <body>
@@ -39,6 +48,8 @@
         menu
       </button>
       <h1>Home page</h1>
+      <a href="../fr/index.html"><img src="https://api.iconify.design/flag:fr-4x3.svg" alt="drapeau du Royaume Uni" width="50px" height="50px"></a>
+      </a>
       <nav
         id="mainNav" 
         x-show="menuIsOpen"
