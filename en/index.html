@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="fr" x-data="{menuIsOpen: false}" :class="{noscroll:menuIsOpen,}">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Test menu</title>
+    <script defer src="https://unpkg.com/alpinejs"></script>
+    <style>
+      .menu {
+        position: fixed; /* reste en place lors du défilement */
+        top: 0; /* fixe le menu en haut de la page */
+        left: 0; /* fixe le menu à gauche de la page */
+        width: 100vw; /* largeur de la fenêtre */
+        height: 100vh; /*hauteur de la fenêtre */
+        background: #fff; /* couleur de fond */
+        display: grid; /*grille (pour centrer) */
+        place-content: center; /* alignement au centre (V et H) */
+      }
+      .header__menuBtn {
+        position: relative; /* pour appliquer z-index*/
+        z-index: 10; /* pour que le bouton soit au dessus du menu */
+      }
+      .noscroll,
+      .noscroll body {
+        overflow: hidden;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- https://emmet.io/ -->
+    <!-- header>h1{Test de menu} -->
+    <header>
+      <button
+        aria-controls=mainNav"
+        @click="menuIsOpen = ! menuIsOpen"
+        class="header__menuBtn"
+      >
+        menu
+      </button>
+      <h1>Page d'accueil</h1>
+      <nav
+        id="mainNav" 
+        x-show="menuIsOpen"
+        x-transition.duration.800ms
+        class="menu"
+      >
+        <ul>
+          <li><img src="https://api.iconify.design/openmoji:cat.svg"></a><a href="cats/index.html">Accueil des chats</a></li>
+          <li><img src="https://api.iconify.design/openmoji:dog.svg"><a href="dogs/index.html">Accueil des chiens</a></li>
+        </ul>
+      </nav>
+    </header>
+    <!-- h2>lorem2^p>lorem -->
+    <h2>Et vous, vous êtes plutôt chien ou chats?</h2>
+    <p>
+      Si vous aimez les chiens et les chats ou même un des deux, ce site est fait pour vous. Vous allez pouvoir voir des photos de chiens et de chats que vous allez forcément aimer. Alors allez les regarder et profitez !
+    </p>
+    <p>Ce site est composé de trois éléments :</p>
+    <dl>
+      <dt>Une page d'accueil sur laquelle vous êtes actuellement</dt>
+      <dd>Elle est composée des éléments actuellement sous vos yeux et vous pouvez accéder aux autres page depuis celle-ci.</dd>
+    </dl>
+    <dl>
+      <dt>Des chats</dt>
+      <dd>Vous rentrez dans le domaine des chats en rentrant dans l'accueil des chats. Profitez de photos de chats et d'une petite description de ceux-ci.</dd>
+    </dl>
+    <dl>
+      <dt>Des chiens</dt>
+      <dd>Lorque vous arrivez dans l'accueil des chiens, vous pénétrez dans le domaine des chiens, ne vous inquiétez pas, ils ne mordent pas. Profitez de photos de chiens et d'une petite description de ceux-ci.</dd>
+    </dl>
+  </body>
+</html>
